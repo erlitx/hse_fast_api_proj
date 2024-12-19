@@ -29,7 +29,6 @@ class URLRequest(BaseModel):
     url: str
 
 
-# --- Эндпоинты ---
 # 1. Создание короткой ссылки
 @app.post("/shorten")
 def shorten_url(request: URLRequest, client_request: Request, db: Session = Depends(get_db)):
